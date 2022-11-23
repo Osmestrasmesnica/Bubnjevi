@@ -1,0 +1,100 @@
+.bg {
+    background-image: url(anka\ i\ leka.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+    color: red;
+    font-size: 25px;
+}
+
+
+.keys {
+    display: flex; /* ovo je jako bitna stvar i time pravis dugmice responzivnim */
+    flex: 1;  
+    min-height: 100px;
+    align-items: center; /* nisi bas siguran sta si uradio ovim delom i ovim iznac kada si mu zadao 1 ali bitno je da radi :D*/
+    justify-content: center;
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 70%;
+    width: auto;
+    text-align: center;
+}
+
+.keys div.key{
+    border: 5px solid yellow;
+    border-radius: 0.5rem;
+    margin: 5px;
+    padding: 15px;
+    width:auto;
+    text-align: center;
+    color: wheat;
+    background-color: grey;
+    display: inline-block;
+    letter-spacing: 10px;
+    text-shadow: 0 0 16px green;
+    transition: all 0.1s ease; /* najbitnija stvar preko koje postavljas JS funkciju*/    
+}
+
+.spacekey {
+    border: 5px solid yellow;
+    border-radius: 0.5rem;
+    margin: 5px;
+    padding: 15px;
+    width:auto;
+    text-align: center;
+    color: wheat;
+    background-color: grey;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 86%;
+    left: 40%; 
+    min-height: 100px;
+    letter-spacing: 10px;
+    text-shadow: 0 0 16px green;
+    transition: all 0.1s ease; /* najbitnija stvar preko koje postavljas JS funkciju*/   
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 32px 15pxz green; 
+}
+
+kbd {
+    display: block;
+    font-size: 32px;
+}
+
+.sound {
+    font-size: 1.2rem;
+    margin: 10px;
+    text-transform: uppercase;
+
+}
+
+/* 
+bilo bi kul kada bi stavio SPACE da bude na sredini
+proveri da li ti se ponavljaju neke stvari i koje bi moga da izbacis ako se ponavljaju
+napravi da kada smanjis ekran da ti se pretvaraju u redove ovi kbd
+da li razumes kako si postavio sliku za pozadinu
+da li kontas kako si tekst stavio na sredinu
+kako radi TRANSITION koji je najbitniji deo ovog css jer prema njemu pravis JS funkciju
+naucio si da koristis KEYCODE sajt na kome trazis za svako dugme value
+<kbd> je kao pisaca masina fonta i dugme 
+align-text ne radi u flexboxovima ukoliko ne postoji visina za dati element
+atribute mozes da nazivas 
+*/
